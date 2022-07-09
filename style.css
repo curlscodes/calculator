@@ -1,0 +1,25 @@
+
+#buttons {
+    display:flex;
+    border: 1px dotted red;
+}
+
+.btnDiv {
+    width: 40px;
+    height: 40px;
+}
+
+.button {
+    width: 40px;
+    height: 40px;
+}
+
+div {
+    border: 1px solid green;
+}
+
+#output {
+    width: 212px;
+    margin-bottom: 8px;
+    padding: 4px;
+}
