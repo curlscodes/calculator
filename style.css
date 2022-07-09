@@ -10,7 +10,7 @@ button {
     border-radius: 6px;
 }
 
-.btnDiv {
+.btnNum, .btnOp {
     width: 40px;
     height: 40px;
     margin: 5px 2px;
@@ -27,7 +27,7 @@ button {
     justify-content: flex-start;
 }
 
-#output {
+#screen {
     width: 160px;
     margin: 8px;
     padding: 4px;
