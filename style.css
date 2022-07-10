@@ -29,11 +29,29 @@ button {
 
 #screen {
     width: 160px;
-    margin: 8px;
-    padding: 4px;
-    border: 1px solid black;
+    min-height: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid red;
     background-color: white;
     border-radius: 6px;
+}
+
+#screenLast {
+    min-height: 15px;
+    width: 152px;
+    border: 1px solid blue;
+    margin: 4px 4px 0px 4px;
+    font-size: medium;
+    color: rgb(72, 72, 72);
+}
+
+#screenCurrent {
+    width: 152px;
+    margin: 4px;
+    border: 1px solid black;
+    font-size: large;
     font-weight: 700;
     min-height: 20px;
 }

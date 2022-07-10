@@ -1,4 +1,5 @@
-const screen = document.getElementById('screen')
+const screenCurrent = document.getElementById('screenCurrent')
+console.log(screen)
 const numButtons = document.getElementsByClassName('btnNum')
 const opButtons = document.getElementsByClassName('btnOp')
 const equalsButton = document.getElementById('btnEquals')
@@ -19,8 +20,11 @@ function operate(a, op, b) {
             return subtract(a, b)
         case '*':
             return multiply(a, b)
-        case '/':
-            return divide(a, b)
+        case '/': 
+            if (b === 0) return null
+            else return divide(a, b)
+        default: 
+            return null
     }
 }
 
@@ -29,7 +33,7 @@ function equals() {
     let a = Number(opList[0])
     let b = Number(opList[2])
     let result = operate(a, opList[1], b)
-    screen.textContent = result
+    screen.textContent = result 
 }
 
 function clear() {
@@ -37,7 +41,7 @@ function clear() {
 }
 
 function appendNum(input) {
-    if (input == '*' || input == '+' || input == '-' || input == '+') {
+    if (input == '*' || input == '+' || input == '/' || input == '+') {
         screen.textContent += ` ${input} `
     } else screen.textContent += input
 } 
