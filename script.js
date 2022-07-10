@@ -20,15 +20,20 @@ function operate(a, op, b) {
     }
 }
 
-console.log(numButtons)
-
-numButtons.forEach((element) => {
-    element.childNodes.forEach((buttons) => {
-        buttons.addEventListener('click', () => appendNum(button.textContent))
-    })
-});
-
-
 function appendNum(number) {
     screen.textContent += number
 } 
+
+// adds event listeners to number buttons
+for(let i = 0; i < numButtons.length; i++) {
+    numButtons[i].childNodes.forEach((button) => {
+        button.addEventListener("click", () => appendNum(button.textContent))
+    })
+}
+
+// adds event listeners to operator buttons
+for(let i = 0; i < opButtons.length; i++) {
+    opButtons[i].childNodes.forEach((button) => {
+        button.addEventListener("click", () => appendNum(button.textContent))
+    })
+}
