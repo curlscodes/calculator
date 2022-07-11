@@ -41,7 +41,7 @@ function clear() {
 }
 
 function appendNum(input) {
-    if (input == '*' || input == '+' || input == '/' || input == '+') {
+    if (input == '*' || input == '+' || input == '/' || input == '-') {
         screenCurrent.textContent += ` ${input} `
     } else screenCurrent.textContent += input
 } 
