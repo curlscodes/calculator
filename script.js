@@ -29,21 +29,21 @@ function operate(a, op, b) {
 }
 
 function equals() {
-    let opList = screen.textContent.split(' ')
+    let opList = screenCurrent.textContent.split(' ')
     let a = Number(opList[0])
     let b = Number(opList[2])
     let result = operate(a, opList[1], b)
-    screen.textContent = result 
+    screenCurrent.textContent = result 
 }
 
 function clear() {
-    screen.textContent = ''
+    screenCurrent.textContent = ''
 }
 
 function appendNum(input) {
     if (input == '*' || input == '+' || input == '/' || input == '+') {
-        screen.textContent += ` ${input} `
-    } else screen.textContent += input
+        screenCurrent.textContent += ` ${input} `
+    } else screenCurrent.textContent += input
 } 
 
 // adds event listeners to number buttons
